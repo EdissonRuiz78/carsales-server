@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vehicles",
+  "info": {
+    "name": "vehicles",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "doors": {
+      "type": "integer",
+      "required": true
+    },
+    "seats": {
+      "type": "integer",
+      "required": true
+    },
+    "airbags": {
+      "type": "integer",
+      "required": true
+    },
+    "overview": {
+      "type": "richtext",
+      "required": true
+    },
+    "price": {
+      "type": "float",
+      "required": true
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "collections": {
+      "model": "collections"
+    },
+    "agents": {
+      "model": "agents"
+    }
+  }
+}

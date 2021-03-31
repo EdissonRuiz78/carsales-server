@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agents",
+  "info": {
+    "name": "agents"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "required": true,
+      "type": "biginteger"
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    }
+  }
+}
